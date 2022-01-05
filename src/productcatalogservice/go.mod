@@ -1,4 +1,5 @@
 module github.com/GoogleCloudPlatform/microservices-demo/src/productcatalogservice
+module github.com/newrelic/go-agent/v3
 
 go 1.17
 
