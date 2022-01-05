@@ -58,6 +58,12 @@ func init() {
 }
 
 func main() {
+	app, err := newrelic.NewApplication(
+    newrelic.ConfigAppName("Online Boutique"),
+    newrelic.ConfigLicense("eu01xxc3043eedf01ca4bf737bca3f65db5aNRAL"),
+    newrelic.ConfigDistributedTracerEnabled(true),
+)
+	
 	if os.Getenv("DISABLE_TRACING") == "" {
 		log.Info("Tracing enabled.")
 		go initTracing()
